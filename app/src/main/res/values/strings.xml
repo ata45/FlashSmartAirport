@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Flash Smart Air Port</string>
+    <string-array name="id">
+        
+    </string-array>
+    <string-array name="flight_code">
+        
+    </string-array>
+    <string-array name="flight_type">
+    </string-array>
+
+
+</resources>
