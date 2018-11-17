@@ -13,7 +13,6 @@ class NotificationUtils {
         //------------  alarm settings start  -----------------//
 
         if (timeInMilliSeconds > 0) {
-
             val alarmManager = activity.getSystemService(Activity.ALARM_SERVICE) as AlarmManager
             val alarmIntent = Intent(activity.applicationContext, AlarmReceiver::class.java) // AlarmReceiver1 = broadcast receiver
 

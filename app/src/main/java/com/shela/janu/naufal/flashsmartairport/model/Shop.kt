@@ -10,6 +10,7 @@ data class Shop (
     var contactShop : String? = null,
     var imageShop : String? = null,
     var mapShop : String ? = null,
-    var descShop : String? = null
+    var descShop : String? = null,
+    var reviewShop : Int? = null
 
 )

@@ -26,6 +26,5 @@ class FlightSchedule(
         const val PLANE_IMAGE : String = "PLANE_IMAGE"
         const val DEPART_TIME : String = "DEPART_TIME"
         const val ARRIVE_TIME : String = "ARRIVE_TIME"
-
     }
 }

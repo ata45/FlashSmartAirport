@@ -3,6 +3,8 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.shela.janu.naufal.flashsmartairport">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -11,7 +13,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".HomeActivity">
+        <activity
+                android:name=".HomeActivity"
+                android:excludeFromRecents="true"
+                android:launchMode="singleTask"
+                android:taskAffinity="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -23,11 +29,20 @@
 
         <receiver
                 android:name=".services.AlarmReceiver"
-                android:enabled="true" />
+                android:enabled="true"/>
 
         <service
                 android:name=".services.NotificationService"
-                android:enabled="true" />
+                android:enabled="true"/>
+
+        <activity android:name=".facility.FacilityActivity">
+        </activity>
+        <activity android:name=".flight.FlightActivity">
+        </activity>
+        <activity android:name=".shop.ShopActivity">
+        </activity>
+        <activity android:name=".transportation.TransportActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,13 +1,29 @@
 <resources>
     <string name="app_name">Flash Smart Air Port</string>
-    <string-array name="id">
-        
-    </string-array>
-    <string-array name="flight_code">
-        
-    </string-array>
-    <string-array name="flight_type">
-    </string-array>
 
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="notification_channel_description">This is a sample notification channel for demonstration purpose.
+    </string>
+    <string name="flights">FLIGHTS</string>
+    <string name="check">CHECK</string>
+    <string name="shop_amp_resto"><![CDATA[SHOP & RESTO]]></string>
+    <string name="transport">TRANSPORT</string>
+    <string name="maps">MAPS</string>
+    <string name="facilities">FACILITIES</string>
+    <string name="flights_title">Flights</string>
+    <string name="my_flight">My Flight</string>
+    <string name="help">help</string>
+    <string name="welcome">Welcome to Kertajati Airport</string>
+    <string name="date">Tanggal</string>
+    <string name="kertajati">Kertajati</string>
+
+    <array name="plane_image">
+        <item>@drawable/garuda</item>
+        <item>@drawable/lion</item>
+        <item>@drawable/emirates</item>
+        <item>@drawable/etihad</item>
+    </array>
 
 </resources>

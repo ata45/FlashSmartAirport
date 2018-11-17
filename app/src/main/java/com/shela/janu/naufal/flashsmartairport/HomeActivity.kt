@@ -1,18 +1,72 @@
 package com.shela.janu.naufal.flashsmartairport
 
+import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.shela.janu.naufal.flashsmartairport.help.HelpFragment
 import com.shela.janu.naufal.flashsmartairport.model.*
+import com.shela.janu.naufal.flashsmartairport.services.NotificationUtils
 import kotlinx.android.synthetic.main.activity_home.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class HomeActivity : AppCompatActivity() {
 
+    private val mNotificationTime =
+        Calendar.getInstance().timeInMillis + 5000 //Set after 5 seconds from the current time.
+    private var mNotified = false
+
+
+    @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        initiateData()
 
+        val id = intent.getIntExtra("select", R.id.go_home)
+
+        btm_nav.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.go_home -> {
+                    loadHomeFragment(savedInstanceState)
+                }
+                R.id.go_myflight -> {
+                    loadMyFlightFragment(savedInstanceState)
+                }
+                R.id.go_help -> {
+                    loadHelpFragment(savedInstanceState)
+                }
+            }
+
+            true
+        }
+
+        when (id) {
+            R.id.go_home -> {
+                loadHomeFragment(savedInstanceState)
+            }
+            R.id.go_myflight -> {
+                loadMyFlightFragment(savedInstanceState)
+            }
+            R.id.go_help -> {
+                loadHelpFragment(savedInstanceState)
+            }
+        }
+
+
+        initiateData() // Method untuk memuat semua data yang dibutuhkan, karena tidak disediakan API maka dibuat manual
+
+        val calendar = Calendar.getInstance()
+
+        val today = java.util.Calendar.getInstance()
+
+
+        if (!mNotified) NotificationUtils().setNotification(mNotificationTime, this)
+
+    }
+
+    override fun onPause() {
+        super.onPause()
 
     }
 
@@ -31,56 +85,58 @@ class HomeActivity : AppCompatActivity() {
         fetchDataFacility()
 
         progress_circular.visibility = View.INVISIBLE
-
     }
 
-    private fun LoadHomeFragment(savedInstanceState: Bundle?) {
+    private fun loadHomeFragment(savedInstanceState: Bundle?) {
 
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main_container, HomeFragment(), HomeFragment::class.simpleName)
+                .replace(R.id.main_container, HomeFragment(), HomeFragment::class.java.simpleName)
                 .commit()
         }
     }
 
-    private fun LoadMyFlightFragment(savedInstanceState: Bundle?) {
+    private fun loadMyFlightFragment(savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
                 .replace(
                     R.id.main_container,
-                    MyFlightFragment(), MyFlightFragment::class.simpleName
+                    MyFlightFragment(), MyFlightFragment()::class.java.simpleName
                 )
                 .commit()
         }
     }
 
-    private fun LoadHelpFragment(savedInstanceState: Bundle?) {
+    private fun loadHelpFragment(savedInstanceState: Bundle?) {
 
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main_container, HomeFragment(), HomeFragment::class.simpleName)
+                .replace(R.id.main_container, HelpFragment(), HelpFragment::class.java.simpleName)
                 .commit()
         }
     }
 
 
 
+    @SuppressLint("ResourceType")
     private fun fetchDataFlight() {
 
-        val flight1 = Flight("1", "4001", "departure", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight2 = Flight("2", "4002", "departure", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight3 = Flight("3", "4003", "departure", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight4 = Flight("4", "4004", "departure", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight5 = Flight("5", "4005", "departure", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight6 = Flight("6", "4006", "arrive", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight7 = Flight("7", "4007", "arrive", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight8 = Flight("8", "4008", "arrive", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight9 = Flight("9", "4009", "arrive", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
-        val flight10 = Flight("10", "4010", "arrive", "SBY", "JKT", "Garuda Indonesia", "", "07:00", "08:30")
+        val image = resources.obtainTypedArray(R.array.plane_image)
 
+        val flight1 = Flight("1", "4001", "departure", "SBY", "JKT", "Garuda Indonesia", image.getResourceId(0, 0), "07:00", "08:30")
+        val flight2 = Flight("2", "4002", "departure", "SBY", "ARAB", "Fly Emirates",  image.getResourceId(2, 0), "07:00", "08:30")
+        val flight3 = Flight("3", "4003", "departure", "SBY", "JFK", "Lion Air",  image.getResourceId(1, 0), "07:00", "08:30")
+        val flight4 = Flight("4", "4004", "departure", "SBY", "ACEH", "Garuda Indonesia",  image.getResourceId(0, 0), "07:00", "08:30")
+        val flight5 = Flight("5", "4005", "departure", "SBY", "MESIR", "Fly Emirates",  image.getResourceId(2, 0), "07:00", "08:30")
+        val flight6 = Flight("6", "4006", "arrive", "SBY", "JKT", "Garuda Indonesia",  image.getResourceId(0, 0), "07:00", "08:30")
+        val flight7 = Flight("7", "4007", "arrive", "SBY", "JKT", "Garuda Indonesia",  image.getResourceId(0, 0), "07:00", "08:30")
+        val flight8 = Flight("8", "4008", "arrive", "SBY", "JKT", "Lion Air",  image.getResourceId(1, 0), "07:00", "08:30")
+        val flight9 = Flight("9", "4009", "arrive", "SBY", "JKT", "Ethad Airways",  image.getResourceId(3, 0), "07:00", "08:30")
+        val flight10 = Flight("10", "4010", "arrive", "SBY", "JKT", "Ethad Airways",  image.getResourceId(3, 0), "07:00", "08:30")
+        image.recycle()
         DataStore.FlightList.add(flight1)
         DataStore.FlightList.add(flight2)
         DataStore.FlightList.add(flight3)
@@ -96,15 +152,15 @@ class HomeActivity : AppCompatActivity() {
 
     private fun fetchDataShop() {
 
-        val shop1 = Shop("1", "Izakaya", "Area1", "Restorant", 4, "081212121", "", "", "Warung")
-        val shop2 = Shop("2", "Izakaya", "Area1", "Restorant", 5, "081212121", "", "", "Warung")
-        val shop3 = Shop("3", "Izakaya", "Area1", "Restorant", 4, "081212121", "", "", "Warung")
-        val shop4 = Shop("4", "Izakaya", "Area2", "Restorant", 3, "081212121", "", "", "Warung")
-        val shop5 = Shop("5", "Izakaya", "Area2", "Restorant", 4, "081212121", "", "", "Warung")
-        val shop6 = Shop("6", "Izakaya", "Area2", "Restorant", 5, "081212121", "", "", "Warung")
-        val shop7 = Shop("7", "Izakaya", "Area3", "Restorant", 3, "081212121", "", "", "Warung")
-        val shop8 = Shop("8", "Izakaya", "Area3", "Restorant", 5, "081212121", "", "", "Warung")
-        val shop9 = Shop("9", "Izakaya", "Area3", "Restorant", 4, "081212121", "", "", "Warung")
+        val shop1 = Shop("1", "Izakaya", "Area1", "Restorant", 4, "081212121", "", "", "Warung", 25)
+        val shop2 = Shop("2", "Izakaya", "Area1", "Restorant", 5, "081212121", "", "", "Warung", 100)
+        val shop3 = Shop("3", "Izakaya", "Area1", "Restorant", 4, "081212121", "", "", "Warung", 38)
+        val shop4 = Shop("4", "Izakaya", "Area2", "Restorant", 3, "081212121", "", "", "Warung", 62)
+        val shop5 = Shop("5", "Izakaya", "Area2", "Restorant", 4, "081212121", "", "", "Warung", 67)
+        val shop6 = Shop("6", "Izakaya", "Area2", "Restorant", 5, "081212121", "", "", "Warung", 49)
+        val shop7 = Shop("7", "Izakaya", "Area3", "Restorant", 3, "081212121", "", "", "Warung", 91)
+        val shop8 = Shop("8", "Izakaya", "Area3", "Restorant", 5, "081212121", "", "", "Warung", 20)
+        val shop9 = Shop("9", "Izakaya", "Area3", "Restorant", 4, "081212121", "", "", "Warung", 51)
 
         DataStore.ShopList.add(shop1)
         DataStore.ShopList.add(shop2)
@@ -145,15 +201,15 @@ class HomeActivity : AppCompatActivity() {
 
     private fun fetchDataTransport() {
 
-        val transport1 = Transportation("1","BMW", "Travel", "","", "")
-        val transport2 = Transportation("2","BMW", "Travel", "","", "")
-        val transport3 = Transportation("3","BMW", "Travel", "","", "")
-        val transport4 = Transportation("4","BMW", "Rent", "","", "")
-        val transport5 = Transportation("5","BMW", "Rent", "","", "")
-        val transport6 = Transportation("6","BMW", "Rent", "","", "")
-        val transport7 = Transportation("7","BMW", "Shuttle", "","", "")
-        val transport8 = Transportation("8","BMW", "Shuttle", "","", "")
-        val transport9 = Transportation("9","BMW", "Shuttle", "","", "")
+        val transport1 = Transportation("1", "BMW", "Travel", "", "", "")
+        val transport2 = Transportation("2", "BMW", "Travel", "", "", "")
+        val transport3 = Transportation("3", "BMW", "Travel", "", "", "")
+        val transport4 = Transportation("4", "BMW", "Rent", "", "", "")
+        val transport5 = Transportation("5", "BMW", "Rent", "", "", "")
+        val transport6 = Transportation("6", "BMW", "Rent", "", "", "")
+        val transport7 = Transportation("7", "BMW", "Shuttle", "", "", "")
+        val transport8 = Transportation("8", "BMW", "Shuttle", "", "", "")
+        val transport9 = Transportation("9", "BMW", "Shuttle", "", "", "")
 
         DataStore.TransportList.add(transport1)
         DataStore.TransportList.add(transport2)

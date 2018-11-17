@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textPadLeft">15dp</dimen>
+    <dimen name="textPadTop">10dp</dimen>
+    <dimen name="textPad">10dp</dimen>
+    <dimen name="textSizeTitle">18sp</dimen>
+    <dimen name="titleHeight">50dp</dimen>
+    <dimen name="cardMargin">10dp</dimen>
+    <dimen name="cardRoundness">15dp</dimen>
+    <dimen name="appBar">50dp</dimen>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/go_home"
+            android:title="@string/title_home"
+            android:icon="@drawable/ic_home"
+    />
+
+    <item
+            android:icon="@drawable/ic_my_flight"
+            android:id="@+id/go_myflight"
+            android:title="@string/my_flight" />
+
+    <item
+            android:icon="@drawable/ic_help"
+            android:id="@+id/go_help"
+            android:title="@string/help" />
+
+</menu>

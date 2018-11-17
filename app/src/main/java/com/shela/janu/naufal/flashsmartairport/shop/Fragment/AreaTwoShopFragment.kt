@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.shela.janu.naufal.flashsmartairport.R
 import com.shela.janu.naufal.flashsmartairport.model.Shop
 import com.shela.janu.naufal.flashsmartairport.shop.RecyclerShopAdapter
 
@@ -18,6 +19,6 @@ class AreaTwoShopFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return inflater.inflate(R.layout.fragment_child_shop, container, false)
     }
 }

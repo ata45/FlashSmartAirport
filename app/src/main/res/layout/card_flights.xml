@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <FrameLayout
+                    android:id="@+id/frame_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ellipse"/>
+                <ImageView
+                        android:id="@+id/image_plane"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/garuda"
+                        android:padding="5dp"
+                        android:layout_gravity="center"/>
+            </FrameLayout>
+            <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/frame_image"
+                    android:id="@+id/ll_text"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/time_flight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12.00 - 16.00"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"/>
+                <TextView
+                        android:id="@+id/from_to_flight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nonstop. 4h .JKT - JFK"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"/>
+                <TextView
+                        android:id="@+id/plane_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Garuda Indonesia"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <View
+                    android:layout_toRightOf="@id/frame_image"
+                    android:layout_below="@id/ll_text"
+                    android:layout_marginTop="16dp"
+                    android:background="#ede7e7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+            <Button
+
+                    android:layout_marginTop="10dp"
+                    android:gravity="right"
+                    android:background="@drawable/ic__add_flight"
+                    android:layout_toRightOf="@+id/ll_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
