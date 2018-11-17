@@ -10,6 +10,7 @@
         android:id="@+id/scheduleLayout">
 
     <android.support.design.widget.AppBarLayout
+            app:elevation="0dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
@@ -27,12 +28,14 @@
 
         <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/appBar"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
                 android:id="@+id/toolbarShop">
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.TabLayout
+            app:elevation="0dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tabShop"
@@ -40,7 +43,6 @@
             android:layout_below="@id/appBarShop"
             android:background="@color/colorToolbarBase"
             app:tabTextColor="@color/colorAppBackground"
-            android:elevation="6dp"
             app:tabSelectedTextColor="@color/colorSelected"
             app:tabIndicatorHeight="3dp"
             app:tabIndicatorColor="@color/colorAppBackground"/>

@@ -11,6 +11,7 @@
 
 
     <android.support.design.widget.AppBarLayout
+            app:elevation="0dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
@@ -21,20 +22,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Facilities"
+                android:text="@string/facilities"
                 android:id="@+id/textAppBarFacilities"
                 android:textColor="@color/colorAppBackground"
                 android:textSize="20sp"/>
 
         <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/appBar"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
                 android:id="@+id/toolbarFacilities">
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.TabLayout
+            app:elevation="0dp"
             app:tabIndicatorHeight="3dp"
             app:tabIndicatorColor="@color/colorAppBackground"
             android:layout_width="match_parent"
@@ -44,7 +47,6 @@
             android:layout_below="@id/appBarFacilities"
             android:background="@color/colorToolbarBase"
             app:tabTextColor="@color/colorAppBackground"
-            android:elevation="6dp"
             app:tabGravity="fill"
             app:tabSelectedTextColor="@color/colorSelected"
             />

@@ -15,6 +15,9 @@ class FacilityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_facility)
 
+        setSupportActionBar(toolbarFacilities)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         btm_facility_nav.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.go_home -> {

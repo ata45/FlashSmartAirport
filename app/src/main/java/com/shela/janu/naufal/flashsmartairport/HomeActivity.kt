@@ -13,9 +13,7 @@ import java.util.*
 
 class HomeActivity : AppCompatActivity() {
 
-    private val mNotificationTime =
-        Calendar.getInstance().timeInMillis + 5000 //Set after 5 seconds from the current time.
-    private var mNotified = false
+
 
 
     @SuppressLint("SimpleDateFormat")
@@ -23,6 +21,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        initiateData()
         val id = intent.getIntExtra("select", R.id.go_home)
 
         btm_nav.setOnNavigationItemSelectedListener { item ->
@@ -40,33 +39,12 @@ class HomeActivity : AppCompatActivity() {
 
             true
         }
-
-        when (id) {
-            R.id.go_home -> {
-                loadHomeFragment(savedInstanceState)
-            }
-            R.id.go_myflight -> {
-                loadMyFlightFragment(savedInstanceState)
-            }
-            R.id.go_help -> {
-                loadHelpFragment(savedInstanceState)
-            }
-        }
+        btm_nav.selectedItemId = id
 
 
-        initiateData() // Method untuk memuat semua data yang dibutuhkan, karena tidak disediakan API maka dibuat manual
-
-        val calendar = Calendar.getInstance()
-
-        val today = java.util.Calendar.getInstance()
+        // Method untuk memuat semua data yang dibutuhkan, karena tidak disediakan API maka dibuat manual
 
 
-        if (!mNotified) NotificationUtils().setNotification(mNotificationTime, this)
-
-    }
-
-    override fun onPause() {
-        super.onPause()
 
     }
 
@@ -93,7 +71,7 @@ class HomeActivity : AppCompatActivity() {
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_container, HomeFragment(), HomeFragment::class.java.simpleName)
-                .commit()
+                .commitAllowingStateLoss()
         }
     }
 
@@ -105,7 +83,7 @@ class HomeActivity : AppCompatActivity() {
                     R.id.main_container,
                     MyFlightFragment(), MyFlightFragment()::class.java.simpleName
                 )
-                .commit()
+                .commitAllowingStateLoss()
         }
     }
 
@@ -115,7 +93,7 @@ class HomeActivity : AppCompatActivity() {
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_container, HelpFragment(), HelpFragment::class.java.simpleName)
-                .commit()
+                .commitAllowingStateLoss()
         }
     }
 

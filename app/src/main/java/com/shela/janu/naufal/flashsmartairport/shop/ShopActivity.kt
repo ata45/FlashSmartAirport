@@ -15,6 +15,9 @@ class ShopActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop)
 
+        setSupportActionBar(toolbarShop)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         btm_shop_nav.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.go_home -> {

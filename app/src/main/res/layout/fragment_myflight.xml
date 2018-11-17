@@ -3,6 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cl_myflight"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorAppBackground">
@@ -45,6 +46,8 @@
                 android:layout_below="@id/textAddFlight">
 
             <android.support.v7.widget.CardView
+
+                    android:id="@+id/card_input"
                     android:layout_width="400dp"
                     android:layout_height="250dp"
                     android:layout_margin="10dp"
@@ -66,16 +69,15 @@
                             android:text="Flight Date"/>
 
                     <EditText
-                            android:id="@+id/editDate"
+                            android:id="@+id/edt_date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
                             android:layout_below="@id/flightDate"
-                            android:inputType="date"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="14sp"/>
-
+                            android:textSize="14sp"
+                            android:inputType="date"/>
 
                     <TextView
                             android:id="@+id/flightNumberLabel"
@@ -85,20 +87,18 @@
                             android:layout_marginTop="120dp"
                             android:text="Flight Number"/>
 
-                    <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
 
                     <EditText
-                            android:id="@+id/editFlightNumber"
+                            android:hint="@string/_4001"
+                            android:id="@+id/edit_code"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
                             android:layout_below="@id/flightNumberLabel"
-                            android:inputType="text"
+                            android:inputType="number"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="14sp"/>
+                            android:textSize="14sp" />
 
                     <Button
                             android:id="@+id/buttonSearchFlight"
@@ -109,14 +109,106 @@
                             android:layout_marginBottom="169dp"
                             android:background="@drawable/defaultbutton"
                             android:elevation="3dp"
-                            android:text="Search Flight"
+                            android:text="@string/search_flight"
                             android:textColor="@color/colorAppBackground"
-                            android:textSize="11sp"
+                            android:textSize="12sp"
                             android:translationZ="3dp"/>
 
 
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    android:id="@+id/card_flight"
+                    android:visibility="invisible"
+                    app:cardCornerRadius="@dimen/cardRoundness"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/card_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <FrameLayout
+                                android:id="@+id/frame_image"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp">
+                            <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/ellipse"/>
+                            <ImageView
+                                    android:id="@+id/image_plane"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:src="@drawable/garuda"
+                                    android:padding="5dp"
+                                    android:layout_gravity="center"/>
+                        </FrameLayout>
+                        <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/frame_image"
+                                android:id="@+id/ll_text"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                            <TextView
+                                    android:textStyle="bold"
+                                    android:id="@+id/time_flight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/_12_00_16_00"
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="5dp"/>
+                            <TextView
+                                    android:id="@+id/from_to_flight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nonstop. 4h .JKT - JFK"
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="5dp"
+                                    tools:ignore="HardcodedText"/>
+                            <TextView
+                                    android:id="@+id/plane_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/grd"
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="5dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                                android:layout_toRightOf="@id/frame_image"
+                                android:layout_below="@id/ll_text"
+                                android:layout_marginTop="16dp"
+                                android:background="#ede7e7"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"/>
+                        <Button
+                                android:id="@+id/btn_add_schedule"
+                                android:layout_marginTop="13dp"
+                                android:gravity="right"
+                                android:background="@drawable/ic__add_flight"
+                                android:layout_toRightOf="@+id/ll_text"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentTop="true"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
         </RelativeLayout>
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

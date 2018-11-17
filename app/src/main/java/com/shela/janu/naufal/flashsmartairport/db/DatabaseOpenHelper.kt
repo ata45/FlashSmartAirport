@@ -27,13 +27,13 @@ class DatabaseOpenHelper(ctx: Context) : ManagedSQLiteOpenHelper(
            FlightSchedule.ID to INTEGER + PRIMARY_KEY + AUTOINCREMENT,
            FlightSchedule.ID_FLIGHT to TEXT + UNIQUE ,
            FlightSchedule.CODE_FLIGHT to TEXT + UNIQUE,
+           FlightSchedule.FLIGHT_TYPE to TEXT,
            FlightSchedule.FROM_PLACE to TEXT,
            FlightSchedule.TO_PLACE to TEXT,
-           FlightSchedule.FLIGHT_TYPE to TEXT,
-           FlightSchedule.PLANE_IMAGE to TEXT,
            FlightSchedule.PLANE_NAME to TEXT,
-           FlightSchedule.ARRIVE_TIME to TEXT,
-           FlightSchedule.DEPART_TIME to TEXT
+           FlightSchedule.PLANE_IMAGE to TEXT,
+           FlightSchedule.DEPART_TIME to TEXT,
+           FlightSchedule.ARRIVE_TIME to TEXT
        )
     }
 

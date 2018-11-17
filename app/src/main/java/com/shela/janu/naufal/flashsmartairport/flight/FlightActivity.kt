@@ -15,6 +15,9 @@ class FlightActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flight)
 
+        setSupportActionBar(toolbarFlight)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         btm_flight_nav.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.go_home -> {

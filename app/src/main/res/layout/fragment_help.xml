@@ -36,11 +36,367 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-            <android.support.v4.view.ViewPager
+            <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="190dp"
-                    android:id="@+id/viewpagerHelp">
-            </android.support.v4.view.ViewPager>
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="400dp"
+                        android:id="@+id/lostFoundInfo"
+                        app:cardCornerRadius="@dimen/cardRoundness"
+                        android:elevation="5dp"
+                        android:translationZ="5dp"
+                        android:layout_margin="20dp"
+                        android:layout_gravity="center">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/titleLostFound"
+                                android:background="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:padding="10dp"
+                                android:textColor="@color/colorAppBackground"
+                                android:text="@string/title_lost_found"
+                                android:gravity="center"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/descLostFound"
+                                android:textSize="14sp"
+                                android:padding="15dp"
+                                android:textColor="#000"
+                                android:text="@string/descLostFound"
+                                android:lineSpacingExtra="5dp"/>
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/formLostFound"
+                        app:cardCornerRadius="@dimen/cardRoundness"
+                        android:elevation="5dp"
+                        android:translationZ="5dp"
+                        android:layout_margin="20dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/titleFormLostFound"
+                                android:background="@color/colorPrimary"
+                                android:textColor="@color/colorAppBackground"
+                                android:padding="10dp"
+                                android:text="@string/form_lost_found"
+                                android:textSize="16sp"
+                                android:gravity="center"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelReporterName"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:text="@string/label_reporter_name"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editReporterName"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelOwnerName"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="@string/label_owner_name"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editOwnerName"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelPhoneNumber"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="@string/label_phone_number"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editPhoneNumber"
+                                android:inputType="phone"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelAddress"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Address"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editAddress"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelPostalCode"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Postal Code"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editPostalCode"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelLostdate"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Date of Loss"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editLostDate"
+                                android:inputType="date"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelTimeOfLoss"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Time of Loss"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editTimeOfLoss"
+                                android:inputType="time"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelLocation"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Location"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editLocation"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelType"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Item Type"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editItemType"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelItemDetail"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Detail About Item"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editDetailItem"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelChronology"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Chronology of Lost"/>
+
+                        <EditText
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editChronology"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/labelAttachment"
+                                android:textColor="#000"
+                                android:padding="5dp"
+                                android:textSize="12sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Attachment"/>
+
+                        <Button
+                                android:layout_width="100dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/defaultbutton"
+                                android:id="@+id/buttonChooseFile"
+                                android:layout_marginLeft="20dp"
+                                android:textSize="9sp"
+                                android:textColor="@color/colorAppBackground"
+                                android:text="Choose File"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <Button
+                                    android:layout_width="85dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="58dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:textSize="12sp"
+                                    android:text="Submit"
+                                    android:id="@+id/buttonSubmitLost"
+                                    android:textColor="@color/colorAppBackground"
+                                    android:background="@drawable/defaultbutton"/>
+
+                            <Button
+                                    android:id="@+id/buttonResetLost"
+                                    android:layout_width="85dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/defaultbutton"
+                                    android:text="Reset"
+                                    android:textColor="@color/colorAppBackground"
+                                    android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
 
             <TextView
                     android:layout_width="match_parent"

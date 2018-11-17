@@ -1,23 +1,60 @@
 <resources>
-    <string name="app_name">Flash Smart Air Port</string>
-
+    <string name="app_name">Kertajati App</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="notification_channel_description">This is a sample notification channel for demonstration purpose.
     </string>
-    <string name="flights">FLIGHTS</string>
-    <string name="check">CHECK</string>
-    <string name="shop_amp_resto"><![CDATA[SHOP & RESTO]]></string>
-    <string name="transport">TRANSPORT</string>
-    <string name="maps">MAPS</string>
-    <string name="facilities">FACILITIES</string>
-    <string name="flights_title">Flights</string>
+    <string name="flights">Flights</string>
+    <string name="check">Check</string>
+    <string name="shop_amp_resto"><![CDATA[Shop & Resto]]></string>
+    <string name="transport">Transport</string>
+    <string name="maps">Maps</string>
     <string name="my_flight">My Flight</string>
     <string name="help">help</string>
     <string name="welcome">Welcome to Kertajati Airport</string>
     <string name="date">Tanggal</string>
     <string name="kertajati">Kertajati</string>
+    <string name="kertajati_timetable">Kertajati Timetable</string>
+
+
+    <string name="descLostFound">
+        Barang-barang yang secara sengaja ataupun tidak sengaja ditinggalkan oleh pemiliknya
+        di Bandar Udara Kertajati dapat diserahkan ke petugas keamanan terdekat. Petugas akan
+        menyimpan barang-barang tersebut dan mencocokkannya dengan laporan barang hilang yang masuk.
+        <b> Untuk melaporkan kehilangan barang, silakan mengisi form dibawah ini.</b>
+        Untuk melihat laporan barang hilang dan barang ditemukan silakan melihat tab sebelah tab ini.
+        Untuk informasi lainnya silakan hubungi pusat informasi : 021-98987
+    </string>
+
+    <string name="title_lost_found">About Lost and Found Item</string>
+    <string name="form_lost_found">Lost and Found Item</string>
+    <string name="label_reporter_name">Reporter Name</string>
+    <string name="label_owner_name">Owner Name</string>
+    <string name="label_Address">Address</string>
+    <string name="label_phone_number">Phone Number</string>
+    <string name="label_date_loss">Date of Loss</string>
+    <string name="label_time_los">Time Of Loss</string>
+    <string name="facilities">Facilities</string>
+    <string name="_4001">4001</string>
+    <string name="garuda_indonesia">Garuda Indonesia</string>
+    <string name="nonstop_4h_jkt_jfk">Nonstop. 4h .JKT - JFK</string>
+    <string name="example_time">12.00 - 16.00</string>
+    <string name="strip">-</string>
+    <string name="space"/>
+    <string name="mini_space"/>
+    <string name="add_success">Jadwal anda sudah tertambah</string>
+    <string name="search_flight">Search Flight</string>
+    <string name="_12_00_16_00">12.00 - 16.00</string>
+    <string name="grd">Garuda Indonesia</string>
+    <string name="no_sched">Jadwal tidak ditemukan</string>
+    <string name="already_added">Jadwal ini sudah anda tambahkan sebelumnya</string>
+    <string name="delete_schedule">Jadwal sudah di hapus</string>
+    <string name="your_upcoming_flight">Your Upcoming Flight</string>
+    <string name="tidak_ada_jadwal_di_simpan">Tidak ada Jadwal di simpan</string>
+    <string name="notif_title">Keberangakatan pukul </string>
+    <string name="goal">Tujuan </string>
+    <string name="with">, dengan </string>
 
     <array name="plane_image">
         <item>@drawable/garuda</item>
@@ -25,5 +62,18 @@
         <item>@drawable/emirates</item>
         <item>@drawable/etihad</item>
     </array>
+
+    <string-array name="flight">
+        <item>4001</item>
+        <item>4002</item>
+        <item>4003</item>
+        <item>4004</item>
+        <item>4005</item>
+        <item>4006</item>
+        <item>4007</item>
+        <item>4008</item>
+        <item>4009</item>
+        <item>4010</item>
+    </string-array>
 
 </resources>

@@ -10,5 +10,7 @@ class DataStore {
       val ShopList :  MutableList<Shop> = mutableListOf()
       val FacilityList : MutableList<Facility> = mutableListOf()
       val TransportList :  MutableList<Transportation> = mutableListOf()
+      var titleNotify : String = ""
+      var bodyNotify : String = ""
   }
 }

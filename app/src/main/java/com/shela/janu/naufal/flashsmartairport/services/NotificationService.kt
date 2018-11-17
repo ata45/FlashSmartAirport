@@ -11,6 +11,7 @@ import android.media.RingtoneManager
 import android.os.Build
 import com.shela.janu.naufal.flashsmartairport.HomeActivity
 import com.shela.janu.naufal.flashsmartairport.R
+import com.shela.janu.naufal.flashsmartairport.model.DataStore
 import java.util.*
 
 
@@ -65,8 +66,8 @@ class NotificationService : IntentService("NotificationService") {
             val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             val notifyIntent = Intent(this, HomeActivity::class.java)
 
-            val title = "Sample Notification"
-            val message = "You have received a sample notification. This notification will take you to the details page."
+            val title = DataStore.titleNotify
+            val message = DataStore.bodyNotify
 
             notifyIntent.putExtra("title", title)
             notifyIntent.putExtra("message", message)
@@ -116,5 +117,14 @@ class NotificationService : IntentService("NotificationService") {
         }
 
 
+    }
+
+    private fun notifyTitle(title : String) : String{
+        return title
+    }
+
+    private fun notifyBody(body : String) : String{
+
+        return body
     }
 }

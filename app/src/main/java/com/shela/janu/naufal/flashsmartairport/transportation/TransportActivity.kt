@@ -16,6 +16,9 @@ class TransportActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transport)
 
+        setSupportActionBar(toolbarTransport)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         btm_transport_nav.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.go_home -> {
