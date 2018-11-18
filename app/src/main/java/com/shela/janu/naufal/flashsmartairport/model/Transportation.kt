@@ -6,7 +6,7 @@ data class Transportation (
     var nameTransport : String? = null,
     var typeTransport : String? = null,
     var descTransport : String? = null,
-    var ImageTransport : String? = null,
+    var ImageTransport : Int? = null,
     var timeLineTransport : String? = null
 
 )

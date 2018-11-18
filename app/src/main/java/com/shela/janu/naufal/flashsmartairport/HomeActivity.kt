@@ -14,8 +14,6 @@ import java.util.*
 class HomeActivity : AppCompatActivity() {
 
 
-
-
     @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +41,6 @@ class HomeActivity : AppCompatActivity() {
 
 
         // Method untuk memuat semua data yang dibutuhkan, karena tidak disediakan API maka dibuat manual
-
 
 
     }
@@ -98,23 +95,59 @@ class HomeActivity : AppCompatActivity() {
     }
 
 
-
     @SuppressLint("ResourceType")
     private fun fetchDataFlight() {
 
         val image = resources.obtainTypedArray(R.array.plane_image)
 
-        val flight1 = Flight("1", "4001", "departure", "SBY", "JKT", "Garuda Indonesia", image.getResourceId(0, 0), "07:00", "08:30")
-        val flight2 = Flight("2", "4002", "departure", "SBY", "ARAB", "Fly Emirates",  image.getResourceId(2, 0), "07:00", "08:30")
-        val flight3 = Flight("3", "4003", "departure", "SBY", "JFK", "Lion Air",  image.getResourceId(1, 0), "07:00", "08:30")
-        val flight4 = Flight("4", "4004", "departure", "SBY", "ACEH", "Garuda Indonesia",  image.getResourceId(0, 0), "07:00", "08:30")
-        val flight5 = Flight("5", "4005", "departure", "SBY", "MESIR", "Fly Emirates",  image.getResourceId(2, 0), "07:00", "08:30")
-        val flight6 = Flight("6", "4006", "arrive", "SBY", "JKT", "Garuda Indonesia",  image.getResourceId(0, 0), "07:00", "08:30")
-        val flight7 = Flight("7", "4007", "arrive", "SBY", "JKT", "Garuda Indonesia",  image.getResourceId(0, 0), "07:00", "08:30")
-        val flight8 = Flight("8", "4008", "arrive", "SBY", "JKT", "Lion Air",  image.getResourceId(1, 0), "07:00", "08:30")
-        val flight9 = Flight("9", "4009", "arrive", "SBY", "JKT", "Ethad Airways",  image.getResourceId(3, 0), "07:00", "08:30")
-        val flight10 = Flight("10", "4010", "arrive", "SBY", "JKT", "Ethad Airways",  image.getResourceId(3, 0), "07:00", "08:30")
-        image.recycle()
+        val flight1 = Flight(
+            "1",
+            "4001",
+            "departure",
+            "SBY",
+            "JKT",
+            "Garuda Indonesia",
+            image.getResourceId(0, 0),
+            "07:00",
+            "08:30"
+        )
+        val flight2 =
+            Flight("2", "4002", "departure", "SBY", "ARAB", "Fly Emirates", image.getResourceId(2, 0), "07:00", "08:30")
+        val flight3 =
+            Flight("3", "4003", "departure", "SBY", "JFK", "Lion Air", image.getResourceId(1, 0), "07:00", "08:30")
+        val flight4 = Flight(
+            "4",
+            "4004",
+            "departure",
+            "SBY",
+            "ACEH",
+            "Garuda Indonesia",
+            image.getResourceId(0, 0),
+            "07:00",
+            "08:30"
+        )
+        val flight5 = Flight(
+            "5",
+            "4005",
+            "departure",
+            "SBY",
+            "MESIR",
+            "Fly Emirates",
+            image.getResourceId(2, 0),
+            "07:00",
+            "08:30"
+        )
+        val flight6 =
+            Flight("6", "4006", "arrive", "SBY", "JKT", "Garuda Indonesia", image.getResourceId(0, 0), "07:00", "08:30")
+        val flight7 =
+            Flight("7", "4007", "arrive", "SBY", "JKT", "Garuda Indonesia", image.getResourceId(0, 0), "07:00", "08:30")
+        val flight8 =
+            Flight("8", "4008", "arrive", "SBY", "JKT", "Lion Air", image.getResourceId(1, 0), "07:00", "08:30")
+        val flight9 =
+            Flight("9", "4009", "arrive", "SBY", "JKT", "Ethad Airways", image.getResourceId(3, 0), "07:00", "08:30")
+        val flight10 =
+            Flight("10", "4010", "arrive", "SBY", "JKT", "Ethad Airways", image.getResourceId(3, 0), "07:00", "08:30")
+
         DataStore.FlightList.add(flight1)
         DataStore.FlightList.add(flight2)
         DataStore.FlightList.add(flight3)
@@ -126,19 +159,210 @@ class HomeActivity : AppCompatActivity() {
         DataStore.FlightList.add(flight9)
         DataStore.FlightList.add(flight10)
 
+        image.recycle()
+
+
     }
 
+    @SuppressLint("ResourceType")
     private fun fetchDataShop() {
 
-        val shop1 = Shop("1", "Izakaya", "Area1", "Restorant", 4, "081212121", "", "", "Warung", 25)
-        val shop2 = Shop("2", "Izakaya", "Area1", "Restorant", 5, "081212121", "", "", "Warung", 100)
-        val shop3 = Shop("3", "Izakaya", "Area1", "Restorant", 4, "081212121", "", "", "Warung", 38)
-        val shop4 = Shop("4", "Izakaya", "Area2", "Restorant", 3, "081212121", "", "", "Warung", 62)
-        val shop5 = Shop("5", "Izakaya", "Area2", "Restorant", 4, "081212121", "", "", "Warung", 67)
-        val shop6 = Shop("6", "Izakaya", "Area2", "Restorant", 5, "081212121", "", "", "Warung", 49)
-        val shop7 = Shop("7", "Izakaya", "Area3", "Restorant", 3, "081212121", "", "", "Warung", 91)
-        val shop8 = Shop("8", "Izakaya", "Area3", "Restorant", 5, "081212121", "", "", "Warung", 20)
-        val shop9 = Shop("9", "Izakaya", "Area3", "Restorant", 4, "081212121", "", "", "Warung", 51)
+        val image = resources.obtainTypedArray(R.array.image_shop)
+
+        val shop1 = Shop(
+            "1",
+            "Alfa mart",
+            "Area1",
+            "Shop",
+            4,
+            "081212129",
+            image.getResourceId(0, 0),
+            "",
+            "Alfa mart menjual berbagai keperluan engan harga terjangkau, tersedia di Terminal 1 dekat ATM Center",
+            25,
+            "04.00 - 24.00",
+            "Rp 500 - Rp.100.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar"
+        )
+        val shop2 = Shop(
+            "2",
+            "Geprek bensu",
+            "Area1",
+            "Food",
+            5,
+            "081312128",
+            image.getResourceId(1, 0),
+            "",
+            "Geprek Bensu menjual ayam geprek dengan level kepedasan yang berbeda, terdapat pada Terminal 1",
+            100,
+            "07.00 - 21.00",
+            "Rp. 15.000 - Rp. 50.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Euro"
+        )
+        val shop3 = Shop(
+            "3",
+            "Chatime",
+            "Area1",
+            "Food",
+            4,
+            "081412127",
+            image.getResourceId(2, 0),
+            "",
+            "Chatime menjual minuman susu kocok aneka rasa dengan campuran berbagai bahan, terdapat pada terminal 1",
+            38,
+            "07.00 - 23.00",
+            "Rp. 20.000 - Rp. 70.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Euro"
+        )
+        val shop4 = Shop(
+            "4",
+            "Garuda Souvenir",
+            "Area1",
+            "Shop",
+            3,
+            "081512126",
+            image.getResourceId(3, 0),
+            "",
+            "Garuda Souvenir menjual berbgai souvenir khas indonesia",
+            62,
+            "04.00 - 21.00",
+            "Rp. 50.000 - Rp. 1.000.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Euro, Yen"
+        )
+        val shop5 = Shop(
+            "5",
+            "Giant",
+            "Area2",
+            "Shop",
+            4,
+            "081612125",
+            image.getResourceId(4, 0),
+            "",
+            "Toko serba ada dengan harga terjangkau, terdapat di Terminal 2",
+            67,
+            "05.00 - 23.00",
+            "Rp. 1000 - Rp. 200.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar"
+        )
+        val shop6 = Shop(
+            "6",
+            "Indomaret",
+            "Area2",
+            "Shop",
+            5,
+            "081712124",
+            image.getResourceId(5, 0),
+            "",
+            "Toko serba ada buka 24 jam dengan harga terjangkau",
+            49,
+            "00.00 - 23.59",
+            "Rp. 1000 - Rp 150.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Euro"
+        )
+        val shop7 = Shop(
+            "7",
+            "Izakaya",
+            "Area2",
+            "Food",
+            3,
+            "081812123",
+            image.getResourceId(6, 0),
+            "",
+            "Restoran Jepang cepat saji dengan makanan khas tradisional jepang",
+            91,
+            "06.00 - 22.00",
+            "Rp. 15.000 - Rp. 100.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Yen"
+        )
+        val shop8 = Shop(
+            "8",
+            "KFC",
+            "Area2",
+            "Food",
+            5,
+            "081912122",
+            image.getResourceId(7, 0),
+            "",
+            "Restoran Cepat saji menyajikan Ayam Goreng dan makanan Fastfood lain nya",
+            20,
+            "00.00 - 23.59",
+            "Rp. 15.000 -  Rp. 90.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Euro, Yen, Ringgit"
+        )
+        val shop9 = Shop(
+            "9",
+            "MCD",
+            "Area3",
+            "Food",
+            4,
+            "081222121",
+            image.getResourceId(8, 0),
+            "",
+            "Restoran Cepat saji menyajikan berbagai makanan amerika atau junk food",
+            51,
+            "03.00 - 22.00",
+            "Rp. 20.000 - Rp. 150.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Euro"
+        )
+        val shop10 = Shop(
+            "10",
+            "Miniso",
+            "Area3",
+            "Shop",
+            4,
+            "081222121",
+            image.getResourceId(9, 0),
+            "",
+            "Toko yang menjual berbagai alat dan perkakas khas dari Asia timur",
+            51,
+            "08.00 - 23.59",
+            "Rp 50.000 - Rp 300.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Yen"
+        )
+        val shop11 = Shop(
+            "11",
+            "Richeese",
+            "Area3",
+            "Food",
+            4,
+            "081222121",
+            image.getResourceId(10, 0),
+            "",
+            "Restoran Cepat saji menyajikan makanan dengan serba Keju",
+            51,
+            "05.00 - 22.00",
+            "Rp 30.000 - Rp 100.000",
+            "Cash, Debit",
+            "Rupiah, US Dollar, Euro"
+        )
+        val shop12 = Shop(
+            "12",
+            "Souvenir",
+            "Area3",
+            "Shop",
+            4,
+            "081222121",
+            image.getResourceId(11, 0),
+            "",
+            "Toko menjual souvenir dari seluruh manca negara degan kualitas tinggi",
+            51,
+            "09.00 - 23.00",
+            "Rp 50.000 - Rp 2.000.000",
+            "Cash, Debit",
+            "Dollar, Rupiah, Euro, Yen"
+        )
+
+
 
         DataStore.ShopList.add(shop1)
         DataStore.ShopList.add(shop2)
@@ -149,20 +373,64 @@ class HomeActivity : AppCompatActivity() {
         DataStore.ShopList.add(shop7)
         DataStore.ShopList.add(shop8)
         DataStore.ShopList.add(shop9)
+        DataStore.ShopList.add(shop10)
+        DataStore.ShopList.add(shop11)
+        DataStore.ShopList.add(shop12)
+
+        image.recycle()
 
     }
 
+    @SuppressLint("ResourceType")
     private fun fetchDataFacility() {
 
-        val facility1 = Facility("1", "", "", "", "Area1")
-        val facility2 = Facility("2", "", "", "", "Area1")
-        val facility3 = Facility("3", "", "", "", "Area1")
-        val facility4 = Facility("4", "", "", "", "Area2")
-        val facility5 = Facility("5", "", "", "", "Area2")
-        val facility6 = Facility("6", "", "", "", "Area2")
-        val facility7 = Facility("7", "", "", "", "Area3")
-        val facility8 = Facility("8", "", "", "", "Area3")
-        val facility9 = Facility("9", "", "", "", "Area3")
+        val image = resources.obtainTypedArray(R.array.facilities)
+
+        val facility1 =
+            Facility("1", "Air Port Lounge T1", "Tempat tunggu pesawat Terminal 1", "Area1", image.getResourceId(0, 0))
+        val facility2 =
+            Facility("2", "Air Port Lounge T2", "Tempat tunggu pesawat Terminal 2", "Area2", image.getResourceId(1, 0))
+        val facility3 = Facility(
+            "3",
+            "Airport Mosque",
+            "Masjid At-Taqwa besar bandara Kertajati",
+            "Area2",
+            image.getResourceId(2, 0)
+        )
+        val facility4 =
+            Facility("4", "Kids Corner T1", "Tempat bermain anak Terminal 1", "Area1", image.getResourceId(3, 0))
+        val facility5 =
+            Facility("5", "Kids Corner T3", "Tempat bermain anak Terminal 2", "Area3", image.getResourceId(4, 0))
+        val facility6 = Facility(
+            "6",
+            "Money Charger T2",
+            "Tempat penukaran mata uang Terminal 2",
+            "Area2",
+            image.getResourceId(5, 0)
+        )
+        val facility7 = Facility(
+            "7",
+            "Money Charger T3",
+            "Tempat pertukaran mata uang Terminal 3",
+            "Area3",
+            image.getResourceId(6, 0)
+        )
+        val facility8 =
+            Facility("8", "Airport Mushola", "Mushola Al-Ikhlas bandara Kertajati", "Area1", image.getResourceId(7, 0))
+        val facility9 = Facility("9", "Main Toilet Airport", "Toilet utama bandara", "Area3", image.getResourceId(8, 0))
+        val facility10 =
+            Facility("10", "ATM Centre T1", "ATM semua tipe kartu Terminal 1", "Area1", image.getResourceId(9, 0))
+        val facility11 =
+            Facility("11", "ATM centre T3", "ATM semua tipe kartu Terminal 2", "Area3", image.getResourceId(10, 0))
+        val facility12 = Facility(
+            "12",
+            "Airport Hotel T2",
+            "Hotel bandara kertajati Terminal 2",
+            "Area2",
+            image.getResourceId(11, 0)
+        )
+
+
 
         DataStore.FacilityList.add(facility1)
         DataStore.FacilityList.add(facility2)
@@ -173,21 +441,94 @@ class HomeActivity : AppCompatActivity() {
         DataStore.FacilityList.add(facility7)
         DataStore.FacilityList.add(facility8)
         DataStore.FacilityList.add(facility9)
+        DataStore.FacilityList.add(facility10)
+        DataStore.FacilityList.add(facility11)
+        DataStore.FacilityList.add(facility12)
+
+        image.recycle()
 
 
     }
 
+    @SuppressLint("ResourceType")
     private fun fetchDataTransport() {
 
-        val transport1 = Transportation("1", "BMW", "Travel", "", "", "")
-        val transport2 = Transportation("2", "BMW", "Travel", "", "", "")
-        val transport3 = Transportation("3", "BMW", "Travel", "", "", "")
-        val transport4 = Transportation("4", "BMW", "Rent", "", "", "")
-        val transport5 = Transportation("5", "BMW", "Rent", "", "", "")
-        val transport6 = Transportation("6", "BMW", "Rent", "", "", "")
-        val transport7 = Transportation("7", "BMW", "Shuttle", "", "", "")
-        val transport8 = Transportation("8", "BMW", "Shuttle", "", "", "")
-        val transport9 = Transportation("9", "BMW", "Shuttle", "", "", "")
+        val image = resources.obtainTypedArray(R.array.transport_image)
+
+        val transport1 = Transportation(
+            "1",
+            "Bus CT",
+            "Travel",
+            "Travel kelas 1 tujuan bandara Kertajati",
+            image.getResourceId(0, 0),
+            "04.00 - 22.00"
+        )
+        val transport2 = Transportation(
+            "2",
+            "Bus DMR",
+            "Travel",
+            "Travel kelas 2 tujuan bandara Kertajati",
+            image.getResourceId(1, 0),
+            "06.00 - 24.00"
+        )
+        val transport3 = Transportation(
+            "3",
+            "Bus FDR",
+            "Travel",
+            "Travel kelas 3 tujuan bandara Kertajati",
+            image.getResourceId(2, 0),
+            "08.00 - 20.00"
+        )
+        val transport4 = Transportation(
+            "4",
+            "Bus LNDN",
+            "Rent",
+            "Menyewakan untuk rombongan tujuan bandara Kertajati",
+            image.getResourceId(3, 0),
+            "Tentati, maksimal seminggu"
+        )
+        val transport5 = Transportation(
+            "5",
+            "Bus MT",
+            "Rent",
+            "Menyewakan  untuk rombongan tujuan bandara Kertajati",
+            image.getResourceId(4, 0),
+            "Tentatif, maksimal seminggu"
+        )
+        val transport6 = Transportation(
+            "6",
+            "Blue Bird",
+            "Rent",
+            "Menyewakan untuk sekeluarga tujuan bandara Kertajati",
+            image.getResourceId(5, 0),
+            "Tentatif, maksimal 5 hari"
+        )
+        val transport7 = Transportation(
+            "7",
+            "Bus Tingkat",
+            "Shuttle",
+            "Angkutan umum  Kertajati Area 1",
+            image.getResourceId(6, 0),
+            "05.00 - 23.00"
+        )
+        val transport8 = Transportation(
+            "8",
+            "Bus TJ",
+            "Shuttle",
+            "Angkutan umum  Kertajati Area 2",
+            image.getResourceId(7, 0),
+            "04.00 - 23.00"
+        )
+        val transport9 = Transportation(
+            "9",
+            "Bus MTR",
+            "Shuttle",
+            "Angkutan umum  Kertajati Area 3",
+            image.getResourceId(8, 0),
+            "06.00 - 23.00"
+        )
+
+
 
         DataStore.TransportList.add(transport1)
         DataStore.TransportList.add(transport2)
@@ -198,6 +539,9 @@ class HomeActivity : AppCompatActivity() {
         DataStore.TransportList.add(transport7)
         DataStore.TransportList.add(transport8)
         DataStore.TransportList.add(transport9)
+
+        image.recycle()
+
 
     }
 

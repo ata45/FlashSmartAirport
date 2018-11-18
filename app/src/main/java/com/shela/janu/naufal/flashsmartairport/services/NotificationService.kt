@@ -86,8 +86,8 @@ class NotificationService : IntentService("NotificationService") {
                 mNotification = Notification.Builder(this, CHANNEL_ID)
                     // Set the intent that will fire when the user taps the notification
                     .setContentIntent(pendingIntent)
-                    .setSmallIcon(R.drawable.ic_menu_vector)
-                    .setLargeIcon(BitmapFactory.decodeResource(res, R.mipmap.ic_launcher))
+                    .setSmallIcon(R.drawable.logo_kertajati)
+                    .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.logo_kertajati))
                     .setAutoCancel(true)
                     .setContentTitle(title)
                     .setStyle(
@@ -99,8 +99,8 @@ class NotificationService : IntentService("NotificationService") {
                 mNotification = Notification.Builder(this)
                     // Set the intent that will fire when the user taps the notification
                     .setContentIntent(pendingIntent)
-                    .setSmallIcon(R.drawable.ic_menu_vector)
-                    .setLargeIcon(BitmapFactory.decodeResource(res, R.mipmap.ic_launcher))
+                    .setSmallIcon(R.drawable.logo_kertajati)
+                    .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.logo_kertajati))
                     .setAutoCancel(true)
                     .setPriority(Notification.PRIORITY_MAX)
                     .setContentTitle(title)
@@ -119,12 +119,4 @@ class NotificationService : IntentService("NotificationService") {
 
     }
 
-    private fun notifyTitle(title : String) : String{
-        return title
-    }
-
-    private fun notifyBody(body : String) : String{
-
-        return body
-    }
 }

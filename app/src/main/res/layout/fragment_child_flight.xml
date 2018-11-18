@@ -5,6 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
     <android.support.v7.widget.CardView
             android:layout_margin="10dp"
             android:elevation="10dp"
@@ -13,14 +14,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <android.support.v7.widget.RecyclerView
-                android:id="@+id/rcy_flights"
-                android:paddingLeft="5dp"
-                android:paddingRight="20dp"
-                android:layout_width="match_parent"
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/Swipe_flight"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-        </android.support.v7.widget.RecyclerView>
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcy_flights"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
 
     </android.support.v7.widget.CardView>
 

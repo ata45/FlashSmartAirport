@@ -3,10 +3,6 @@ package com.shela.janu.naufal.flashsmartairport.flight
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
-import com.shela.janu.naufal.flashsmartairport.facility.Fragment.AllFacilityFragment
-import com.shela.janu.naufal.flashsmartairport.facility.Fragment.AreaOneFacilityFragment
-import com.shela.janu.naufal.flashsmartairport.facility.Fragment.AreaThreeFacilityFragment
-import com.shela.janu.naufal.flashsmartairport.facility.Fragment.AreaTwoFacilityFragment
 import com.shela.janu.naufal.flashsmartairport.flight.Fragment.ArrivalFragment
 import com.shela.janu.naufal.flashsmartairport.flight.Fragment.DepartureFragment
 

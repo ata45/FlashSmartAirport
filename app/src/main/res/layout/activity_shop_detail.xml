@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/detail_facilities"
+            tools:context=".shop.DetailShopActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:id="@+id/image_atm_centre"/>
+
+        <Button
+                android:id="@+id/btn_back"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic__back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        <android.support.v7.widget.CardView
+                android:layout_width="@dimen/card_desc_width"
+                android:layout_height="@dimen/card_height"
+                android:id="@+id/desc_atm_centre"
+                android:layout_below="@+id/image_atm_centre"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:elevation="@dimen/card_elevation"
+                android:translationZ="@dimen/card_translationZ"
+                app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/titleLostFound"
+                        android:background="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:padding="10dp"
+                        android:textColor="@color/colorAppBackground"
+                        android:text="Description"
+                        android:gravity="center"/>
+
+                <TextView
+                        android:id="@+id/shop_desc"
+                        android:layout_margin="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/parent_phone"
+                android:layout_below="@id/desc_atm_centre">
+
+            <ImageButton
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_phone_call"
+                    android:id="@+id/button_call"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"/>
+
+            <TextView
+                    android:id="@+id/shop_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/button_call"
+                    android:layout_marginTop="25dp"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:text="phone number"
+            />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/parent_button_detail"
+                android:layout_below="@id/parent_phone"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true">
+
+            <Button
+                    android:id="@+id/btn_show_shop"
+                    android:layout_width="@dimen/card_desc_width"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button_call"
+                    android:text="Show Detail Information"
+                    android:textColor="@color/colorAppBackground"
+                    android:textSize="14sp"
+                    android:elevation="3dp"
+                    android:translationZ="3dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/parent_text_detail"
+                android:layout_below="@id/parent_button_detail"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:visibility="invisible">
+
+            <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:text="@string/detail_lokasi"
+                    android:textColor="#333"
+                    android:padding="5dp"/>
+
+            <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:id="@+id/shop_location"
+                    android:text="@string/detail_lokasi"
+                    android:textColor="#333"
+                    android:padding="5dp"/>
+
+            <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:gravity="left"
+                    android:text="@string/jam_operasional"
+                    android:padding="5dp"
+                    android:textColor="#333"/>
+
+            <TextView
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/shop_time_run"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:gravity="left"
+                    android:text="@string/jam_operasional"
+                    android:padding="5dp"
+                    android:textColor="#333"/>
+
+            <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:text="@string/range_harga"
+                    android:padding="5dp"
+                    android:textColor="#333"/>
+
+            <TextView
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/shop_range_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:text="@string/range_harga"
+                    android:padding="5dp"
+                    android:textColor="#333"/>
+
+            <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:text="@string/metode_pembayaran"
+                    android:padding="5dp"
+                    android:textColor="#333"/>
+
+            <TextView
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/shop_method_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:text="@string/metode_pembayaran"
+                    android:padding="5dp"
+                    android:textColor="#333"/>
+
+            <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:text="@string/mata_uang_digunakan"
+                    android:padding="5dp"
+                    android:textColor="#333"/>
+
+            <TextView
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/shop_money_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizeDesc"
+                    android:text="@string/mata_uang_digunakan"
+                    android:padding="5dp"
+                    android:textColor="#333"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/parent_text_detail"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/parent_maps"
+                android:layout_marginTop="20dp">
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

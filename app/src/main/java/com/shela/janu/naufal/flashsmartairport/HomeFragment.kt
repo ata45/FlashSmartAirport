@@ -43,6 +43,9 @@ class HomeFragment : Fragment() {
 
         // Jika tidak ada jadwal yg di simpan, makan muncul tampilaan, tidak ada jadwal\
 
+        val sdf = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.US)
+        val currentDate = sdf.format(Date())
+
         if (flights.size == 0) {
 
             txt_none_saved.visibility = View.VISIBLE
@@ -54,9 +57,8 @@ class HomeFragment : Fragment() {
 
             flight = flights[0]
 
-            val sdf = SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.US)
-            val currentDate = sdf.format(Date())
-            date_now.text = currentDate
+
+
 
 
             home_code_time_flight.text = currentDate + ", " + flight.departTime
@@ -70,6 +72,8 @@ class HomeFragment : Fragment() {
 
             if (!mNotified) NotificationUtils().setNotification(mNotificationTime, activity!!)
         }
+
+        date_now.text = currentDate
 
     }
 

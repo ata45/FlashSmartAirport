@@ -26,9 +26,9 @@ class ShopFragmentAdapter (fm : FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position) {
             0 -> "All"
-            1 -> "Area 1"
-            2 -> "Area 2"
-            else ->  "Area 3"
+            1 -> "T1"
+            2 -> "T2"
+            else ->  "T3"
         }
     }
     override fun getCount(): Int {

@@ -5,11 +5,18 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
             android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/logo_kertajati"
             android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
+            android:roundIcon="@drawable/logo_kertajati"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
@@ -23,8 +30,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".shop.DetailShopActivity">
         </activity>
 
         <receiver
@@ -42,6 +47,10 @@
         <activity android:name=".shop.ShopActivity">
         </activity>
         <activity android:name=".transportation.TransportActivity">
+        </activity>
+        <activity android:name=".shop.ShopDetailActivity">
+        </activity>
+        <activity android:name=".MapsActivity">
         </activity>
     </application>
 

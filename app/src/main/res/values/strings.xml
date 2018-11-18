@@ -22,7 +22,7 @@
         Barang-barang yang secara sengaja ataupun tidak sengaja ditinggalkan oleh pemiliknya
         di Bandar Udara Kertajati dapat diserahkan ke petugas keamanan terdekat. Petugas akan
         menyimpan barang-barang tersebut dan mencocokkannya dengan laporan barang hilang yang masuk.
-        <b> Untuk melaporkan kehilangan barang, silakan mengisi form dibawah ini.</b>
+        <b>Untuk melaporkan kehilangan barang, silakan mengisi form dibawah ini.</b>
         Untuk melihat laporan barang hilang dan barang ditemukan silakan melihat tab sebelah tab ini.
         Untuk informasi lainnya silakan hubungi pusat informasi : 021-98987
     </string>
@@ -43,18 +43,20 @@
     <string name="strip">-</string>
     <string name="space"/>
     <string name="mini_space"/>
-    <string name="add_success">Jadwal anda sudah tertambah</string>
+    <string name="add_success">Schedule has been Added</string>
     <string name="search_flight">Search Flight</string>
     <string name="_12_00_16_00">12.00 - 16.00</string>
     <string name="grd">Garuda Indonesia</string>
-    <string name="no_sched">Jadwal tidak ditemukan</string>
-    <string name="already_added">Jadwal ini sudah anda tambahkan sebelumnya</string>
-    <string name="delete_schedule">Jadwal sudah di hapus</string>
-    <string name="your_upcoming_flight">Your Upcoming Flight</string>
-    <string name="tidak_ada_jadwal_di_simpan">Tidak ada Jadwal di simpan</string>
-    <string name="notif_title">Keberangakatan pukul </string>
-    <string name="goal">Tujuan </string>
-    <string name="with">, dengan </string>
+    <string name="no_sched">Flight schedule not found</string>
+    <string name="already_added">Flight schedule already added</string>
+    <string name="delete_schedule">Flight schedule has been removed</string>
+    <string name="your_upcoming_flight">Your upcoming flight</string>
+    <string name="tidak_ada_jadwal_di_simpan">No schedule yet</string>
+    <string name="notif_title">Keberangakatan pukul</string>
+    <string name="goal">Tujuan</string>
+    <string name="with">, dengan</string>
+    <string name="nama_transport">Nama Transport</string>
+    <string name="deskripsi_transport">Deskripsi Transport</string>
 
     <array name="plane_image">
         <item>@drawable/garuda</item>
@@ -62,6 +64,49 @@
         <item>@drawable/emirates</item>
         <item>@drawable/etihad</item>
     </array>
+
+    <array name="transport_image">
+        <item>@drawable/busct</item>
+        <item>@drawable/busdmr</item>
+        <item>@drawable/busfdr</item>
+        <item>@drawable/buslndn</item>
+        <item>@drawable/busmt</item>
+        <item>@drawable/blebrd</item>
+        <item>@drawable/bustgkt</item>
+        <item>@drawable/bustj</item>
+        <item>@drawable/busmtr</item>
+    </array>
+
+    <array name="facilities">
+        <item>@drawable/airport_lounge_1</item>
+        <item>@drawable/airport_lounge_2</item>
+        <item>@drawable/masjid_bandara</item>
+        <item>@drawable/kids_corner</item>
+        <item>@drawable/kids_corner_2</item>
+        <item>@drawable/money_changer_1</item>
+        <item>@drawable/money_changer_2</item>
+        <item>@drawable/mushola_1</item>
+        <item>@drawable/toilet_bandara</item>
+        <item>@drawable/atm_centre_1</item>
+        <item>@drawable/atm_centre_2</item>
+        <item>@drawable/hotel_bandara</item>
+    </array>
+
+    <array name="image_shop">
+        <item>@drawable/alfa</item>
+        <item>@drawable/bensu</item>
+        <item>@drawable/chatime</item>
+        <item>@drawable/garudasouvenir</item>
+        <item>@drawable/giant</item>
+        <item>@drawable/indomaret</item>
+        <item>@drawable/izakaya</item>
+        <item>@drawable/kfc</item>
+        <item>@drawable/mcd</item>
+        <item>@drawable/miniso</item>
+        <item>@drawable/richeese</item>
+        <item>@drawable/souvenir</item>
+    </array>
+
 
     <string-array name="flight">
         <item>4001</item>
@@ -75,5 +120,13 @@
         <item>4009</item>
         <item>4010</item>
     </string-array>
+
+
+    <string name="title_activity_maps">Map</string>
+    <string name="mata_uang_digunakan">Mata Uang Digunakan :</string>
+    <string name="metode_pembayaran">Metode Pembayaran :</string>
+    <string name="range_harga">Range Harga :</string>
+    <string name="jam_operasional">Jam Operasional :</string>
+    <string name="detail_lokasi">Detail Lokasi :</string>
 
 </resources>

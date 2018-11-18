@@ -2,10 +2,31 @@
 <resources>
     <dimen name="textPadLeft">15dp</dimen>
     <dimen name="textPadTop">10dp</dimen>
+
+
     <dimen name="textPad">10dp</dimen>
     <dimen name="textSizeTitle">18sp</dimen>
     <dimen name="titleHeight">50dp</dimen>
-    <dimen name="cardMargin">10dp</dimen>
-    <dimen name="cardRoundness">15dp</dimen>
+    <dimen name="textSizeDesc">14sp</dimen>
+    <dimen name="textLineSpacing">4dp</dimen>
+
+
+    <!--dimen for tab layout-->
+    <dimen name="tab_elevation">3dp</dimen>
+
+    <!--dimen for app bar-->
+    <dimen name="appBar_height">50dp</dimen>
     <dimen name="appBar">50dp</dimen>
+    <dimen name="appBar_textSize">20sp</dimen>
+
+    <!--dimen for card (general)-->
+    <dimen name="card_corner_radius">15dp</dimen>
+    <dimen name="cardRoundness">15dp</dimen>
+    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="card_translationZ">8dp</dimen>
+
+    <!--dimen for card facilities-->
+    <dimen name="card_desc_width">300dp</dimen>
+    <dimen name="card_height">130dp</dimen>
+
 </resources>

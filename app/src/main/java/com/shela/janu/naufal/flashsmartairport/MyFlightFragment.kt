@@ -72,10 +72,9 @@ class MyFlightFragment : Fragment() {
             if (i.codeFlight == id) {
                 count++
                 flight = i
+                idFlight = flight.idFlight!!
             }
         }
-
-        idFlight = flight.idFlight!!
 
         if(count == 0){
             Snackbar.make(
@@ -88,7 +87,7 @@ class MyFlightFragment : Fragment() {
             flight.codeFlight?.let {
                 Snackbar.make(
                     cl_myflight,
-                    it,
+                    "Flight code : $it",
                     Snackbar.LENGTH_SHORT
                 ).show()
             }
@@ -101,7 +100,7 @@ class MyFlightFragment : Fragment() {
             flight.planeImage?.let { Glide.with(this).load(it).into(image_plane) }
             plane_name.text = flight.planeName
             time_flight.text = flight.departureTime + " - " + flight.arriveTime
-            from_to_flight.text = "Non Stop " + flight.fromPlace + " - " + flight.toPlace
+            from_to_flight.text =  flight.fromPlace + " - " + flight.toPlace
 
 
         }
