@@ -25,7 +25,7 @@ class AreaOneFacilityFragment : Fragment() {
 
         for( i in DataStore.FacilityList){
 
-            if( i.facilityArea == "Area1"){
+            if( i.facilityArea == "Terminal 1"){
                 facilities.add(i)
             }
         }

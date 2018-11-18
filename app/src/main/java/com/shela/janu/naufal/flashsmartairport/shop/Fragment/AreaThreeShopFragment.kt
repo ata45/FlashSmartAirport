@@ -29,7 +29,7 @@ class AreaThreeShopFragment : Fragment() {
         souvenirs.clear()
 
         for (i in DataStore.ShopList) {
-            if (i.areaSHop == "Area3") {
+            if (i.areaSHop == "Terminal 3") {
                 when (i.typeShop) {
                     "Food" -> {
                         foods.add(i)

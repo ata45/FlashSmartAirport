@@ -172,7 +172,7 @@ class HomeActivity : AppCompatActivity() {
         val shop1 = Shop(
             "1",
             "Alfa mart",
-            "Area1",
+            "Terminal 1",
             "Shop",
             4,
             "081212129",
@@ -188,7 +188,7 @@ class HomeActivity : AppCompatActivity() {
         val shop2 = Shop(
             "2",
             "Geprek bensu",
-            "Area1",
+            "Terminal 1",
             "Food",
             5,
             "081312128",
@@ -204,7 +204,7 @@ class HomeActivity : AppCompatActivity() {
         val shop3 = Shop(
             "3",
             "Chatime",
-            "Area1",
+            "Terminal 1",
             "Food",
             4,
             "081412127",
@@ -220,7 +220,7 @@ class HomeActivity : AppCompatActivity() {
         val shop4 = Shop(
             "4",
             "Garuda Souvenir",
-            "Area1",
+            "Terminal 1",
             "Shop",
             3,
             "081512126",
@@ -236,7 +236,7 @@ class HomeActivity : AppCompatActivity() {
         val shop5 = Shop(
             "5",
             "Giant",
-            "Area2",
+            "Terminal 2",
             "Shop",
             4,
             "081612125",
@@ -252,7 +252,7 @@ class HomeActivity : AppCompatActivity() {
         val shop6 = Shop(
             "6",
             "Indomaret",
-            "Area2",
+            "Terminal 2",
             "Shop",
             5,
             "081712124",
@@ -268,7 +268,7 @@ class HomeActivity : AppCompatActivity() {
         val shop7 = Shop(
             "7",
             "Izakaya",
-            "Area2",
+            "Terminal 2",
             "Food",
             3,
             "081812123",
@@ -284,7 +284,7 @@ class HomeActivity : AppCompatActivity() {
         val shop8 = Shop(
             "8",
             "KFC",
-            "Area2",
+            "Terminal 2",
             "Food",
             5,
             "081912122",
@@ -300,7 +300,7 @@ class HomeActivity : AppCompatActivity() {
         val shop9 = Shop(
             "9",
             "MCD",
-            "Area3",
+            "Terminal 3",
             "Food",
             4,
             "081222121",
@@ -316,7 +316,7 @@ class HomeActivity : AppCompatActivity() {
         val shop10 = Shop(
             "10",
             "Miniso",
-            "Area3",
+            "Terminal 3",
             "Shop",
             4,
             "081222121",
@@ -332,7 +332,7 @@ class HomeActivity : AppCompatActivity() {
         val shop11 = Shop(
             "11",
             "Richeese",
-            "Area3",
+            "Terminal 3",
             "Food",
             4,
             "081222121",
@@ -348,7 +348,7 @@ class HomeActivity : AppCompatActivity() {
         val shop12 = Shop(
             "12",
             "Souvenir",
-            "Area3",
+            "Terminal 3",
             "Shop",
             4,
             "081222121",
@@ -387,46 +387,46 @@ class HomeActivity : AppCompatActivity() {
         val image = resources.obtainTypedArray(R.array.facilities)
 
         val facility1 =
-            Facility("1", "Air Port Lounge T1", "Tempat tunggu pesawat Terminal 1", "Area1", image.getResourceId(0, 0))
+            Facility("1", "Air Port Lounge T1", "Tempat tunggu pesawat Terminal 1", "Terminal 1", image.getResourceId(0, 0))
         val facility2 =
-            Facility("2", "Air Port Lounge T2", "Tempat tunggu pesawat Terminal 2", "Area2", image.getResourceId(1, 0))
+            Facility("2", "Air Port Lounge T2", "Tempat tunggu pesawat Terminal 2", "Terminal 2", image.getResourceId(1, 0))
         val facility3 = Facility(
             "3",
             "Airport Mosque",
             "Masjid At-Taqwa besar bandara Kertajati",
-            "Area2",
+            "Terminal 2",
             image.getResourceId(2, 0)
         )
         val facility4 =
-            Facility("4", "Kids Corner T1", "Tempat bermain anak Terminal 1", "Area1", image.getResourceId(3, 0))
+            Facility("4", "Kids Corner T1", "Tempat bermain anak Terminal 1", "Terminal 1", image.getResourceId(3, 0))
         val facility5 =
-            Facility("5", "Kids Corner T3", "Tempat bermain anak Terminal 2", "Area3", image.getResourceId(4, 0))
+            Facility("5", "Kids Corner T3", "Tempat bermain anak Terminal 2", "Terminal 3", image.getResourceId(4, 0))
         val facility6 = Facility(
             "6",
             "Money Charger T2",
             "Tempat penukaran mata uang Terminal 2",
-            "Area2",
+            "Terminal 2",
             image.getResourceId(5, 0)
         )
         val facility7 = Facility(
             "7",
             "Money Charger T3",
             "Tempat pertukaran mata uang Terminal 3",
-            "Area3",
+            "Terminal 3",
             image.getResourceId(6, 0)
         )
         val facility8 =
-            Facility("8", "Airport Mushola", "Mushola Al-Ikhlas bandara Kertajati", "Area1", image.getResourceId(7, 0))
-        val facility9 = Facility("9", "Main Toilet Airport", "Toilet utama bandara", "Area3", image.getResourceId(8, 0))
+            Facility("8", "Airport Mushola", "Mushola Al-Ikhlas bandara Kertajati", "Terminal 1", image.getResourceId(7, 0))
+        val facility9 = Facility("9", "Main Toilet Airport", "Toilet utama bandara", "Terminal 3", image.getResourceId(8, 0))
         val facility10 =
-            Facility("10", "ATM Centre T1", "ATM semua tipe kartu Terminal 1", "Area1", image.getResourceId(9, 0))
+            Facility("10", "ATM Centre T1", "ATM semua tipe kartu Terminal 1", "Terminal 1", image.getResourceId(9, 0))
         val facility11 =
-            Facility("11", "ATM centre T3", "ATM semua tipe kartu Terminal 2", "Area3", image.getResourceId(10, 0))
+            Facility("11", "ATM centre T3", "ATM semua tipe kartu Terminal 2", "Terminal 3", image.getResourceId(10, 0))
         val facility12 = Facility(
             "12",
             "Airport Hotel T2",
             "Hotel bandara kertajati Terminal 2",
-            "Area2",
+            "Terminal 2",
             image.getResourceId(11, 0)
         )
 

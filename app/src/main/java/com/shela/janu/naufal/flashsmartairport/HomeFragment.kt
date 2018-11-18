@@ -4,6 +4,7 @@ package com.shela.janu.naufal.flashsmartairport
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
@@ -100,6 +101,12 @@ class HomeFragment : Fragment() {
         btn_shop.setOnClickListener {
             activity?.startActivity(intentFor<ShopActivity>())
             activity?.finish()
+        }
+        btn_check.setOnClickListener {
+            Snackbar.make(rl_fragment_home, getString(R.string.coming_soon),Snackbar.LENGTH_SHORT).show()
+        }
+        btn_maps.setOnClickListener {
+            Snackbar.make(rl_fragment_home, getString(R.string.coming_soon),Snackbar.LENGTH_SHORT).show()
         }
     }
 
