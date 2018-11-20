@@ -3,6 +3,7 @@ package com.shela.janu.naufal.flashsmartairport.transportation
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.FragmentPagerAdapter
+import android.view.KeyEvent
 import com.shela.janu.naufal.flashsmartairport.HomeActivity
 import com.shela.janu.naufal.flashsmartairport.R
 import kotlinx.android.synthetic.main.activity_transport.*
@@ -38,5 +39,15 @@ class TransportActivity : AppCompatActivity() {
         viewPagerTransport.adapter = pagerAdapter
         tabTransport.setupWithViewPager(viewPagerTransport)
 
+    }
+
+    override fun onKeyShortcut(keyCode: Int, event: KeyEvent?): Boolean {
+        if( keyCode == KeyEvent.KEYCODE_BACK )
+        {
+            startActivity(intentFor<HomeActivity>("select" to R.id.go_home))
+            return true
+        }
+
+        return false
     }
 }

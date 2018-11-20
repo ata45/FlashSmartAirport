@@ -2,6 +2,7 @@ package com.shela.janu.naufal.flashsmartairport.shop
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
 import com.shela.janu.naufal.flashsmartairport.HomeActivity
 import com.shela.janu.naufal.flashsmartairport.R
 import kotlinx.android.synthetic.main.activity_shop.*
@@ -36,5 +37,15 @@ class ShopActivity : AppCompatActivity() {
         pagerAdapter = ShopFragmentAdapter(supportFragmentManager)
         viewPagerShop.adapter = pagerAdapter
         tabShop.setupWithViewPager(viewPagerShop)
+    }
+
+    override fun onKeyShortcut(keyCode: Int, event: KeyEvent?): Boolean {
+        if( keyCode == KeyEvent.KEYCODE_BACK )
+        {
+            startActivity(intentFor<HomeActivity>("select" to R.id.go_home))
+            return true
+        }
+
+        return false
     }
 }

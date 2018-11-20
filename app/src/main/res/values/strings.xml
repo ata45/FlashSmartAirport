@@ -129,5 +129,6 @@
     <string name="jam_operasional">Jam Operasional :</string>
     <string name="detail_lokasi">Detail Lokasi :</string>
     <string name="coming_soon">Coming soon</string>
+    <string name="title_activity_maps2">Map</string>
 
 </resources>

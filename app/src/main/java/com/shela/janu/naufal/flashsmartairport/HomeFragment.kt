@@ -106,7 +106,8 @@ class HomeFragment : Fragment() {
             Snackbar.make(rl_fragment_home, getString(R.string.coming_soon),Snackbar.LENGTH_SHORT).show()
         }
         btn_maps.setOnClickListener {
-            Snackbar.make(rl_fragment_home, getString(R.string.coming_soon),Snackbar.LENGTH_SHORT).show()
+            activity?.startActivity(intentFor<MapsActivity2>())
+            activity?.finish()
         }
     }
 
