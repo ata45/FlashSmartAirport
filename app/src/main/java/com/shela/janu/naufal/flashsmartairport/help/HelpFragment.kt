@@ -9,8 +9,12 @@ import com.shela.janu.naufal.flashsmartairport.R
 
 class HelpFragment  : Fragment(){
 
+    private lateinit var adapter : HelpFragmentAdapter
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        adapter = HelpFragmentAdapter(childFragmentManager)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

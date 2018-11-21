@@ -15,5 +15,6 @@ class DataStore {
       lateinit var FACILITY : Facility
       lateinit var SHOP : Shop
       lateinit var TRANSPORT : Transportation
+      lateinit var URL : String
   }
 }

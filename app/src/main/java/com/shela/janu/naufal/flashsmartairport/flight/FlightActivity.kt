@@ -35,18 +35,18 @@ class FlightActivity : AppCompatActivity() {
             true
         }
 
+        btn_back.setOnClickListener {
+
+            startActivity(intentFor<HomeActivity>())
+        }
+
         pagerAdapter = FlightFragmentAdapter(supportFragmentManager)
         viewPagerFlight.adapter = pagerAdapter
         tabFlight.setupWithViewPager(viewPagerFlight)
     }
 
-    override fun onKeyShortcut(keyCode: Int, event: KeyEvent?): Boolean {
-        if( keyCode == KeyEvent.KEYCODE_BACK )
-        {
-            startActivity(intentFor<HomeActivity>("select" to R.id.go_home))
-            return true
-        }
-
-        return false
+    override fun onBackPressed() {
+        startActivity(intentFor<HomeActivity>("select" to R.id.go_home))
     }
+
 }

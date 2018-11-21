@@ -35,19 +35,19 @@ class TransportActivity : AppCompatActivity() {
             true
         }
 
+        btn_back.setOnClickListener {
+
+            startActivity(intentFor<HomeActivity>())
+        }
+
         pagerAdapter = TransportFragmentAdapter(supportFragmentManager)
         viewPagerTransport.adapter = pagerAdapter
         tabTransport.setupWithViewPager(viewPagerTransport)
 
     }
 
-    override fun onKeyShortcut(keyCode: Int, event: KeyEvent?): Boolean {
-        if( keyCode == KeyEvent.KEYCODE_BACK )
-        {
-            startActivity(intentFor<HomeActivity>("select" to R.id.go_home))
-            return true
-        }
-
-        return false
+    override fun onBackPressed() {
+        startActivity(intentFor<HomeActivity>("select" to R.id.go_home))
     }
+
 }

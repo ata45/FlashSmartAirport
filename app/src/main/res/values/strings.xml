@@ -15,7 +15,9 @@
     <string name="welcome">Welcome to Kertajati Airport</string>
     <string name="date">Tanggal</string>
     <string name="kertajati">Kertajati</string>
-    <string name="kertajati_timetable">Kertajati Timetable</string>
+    <string name="kertajati_timetable">Kertajati Flight Schedule</string>
+    <string name="check_in">Check In</string>
+    <string name="citilink">Citilink Air</string>
 
 
     <string name="descLostFound">
@@ -130,5 +132,9 @@
     <string name="detail_lokasi">Detail Lokasi :</string>
     <string name="coming_soon">Coming soon</string>
     <string name="title_activity_maps2">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map">Map</string>
 
 </resources>

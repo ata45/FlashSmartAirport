@@ -112,9 +112,9 @@ class HomeActivity : AppCompatActivity() {
             "08:30"
         )
         val flight2 =
-            Flight("2", "4002", "departure", "SBY", "ARAB", "Fly Emirates", image.getResourceId(2, 0), "07:00", "08:30")
+            Flight("2", "4002", "departure", "SBY", "ARAB", "Fly Emirates", image.getResourceId(2, 0), "08:00", "09:30")
         val flight3 =
-            Flight("3", "4003", "departure", "SBY", "JFK", "Lion Air", image.getResourceId(1, 0), "07:00", "08:30")
+            Flight("3", "4003", "departure", "SBY", "JFK", "Lion Air", image.getResourceId(1, 0), "08:30", "09:30")
         val flight4 = Flight(
             "4",
             "4004",
@@ -123,8 +123,8 @@ class HomeActivity : AppCompatActivity() {
             "ACEH",
             "Garuda Indonesia",
             image.getResourceId(0, 0),
-            "07:00",
-            "08:30"
+            "10:00",
+            "11:30"
         )
         val flight5 = Flight(
             "5",
@@ -134,19 +134,19 @@ class HomeActivity : AppCompatActivity() {
             "MESIR",
             "Fly Emirates",
             image.getResourceId(2, 0),
-            "07:00",
-            "08:30"
+            "13:00",
+            "14:30"
         )
         val flight6 =
-            Flight("6", "4006", "arrive", "SBY", "JKT", "Garuda Indonesia", image.getResourceId(0, 0), "07:00", "08:30")
+            Flight("6", "4006", "arrive", "ACEH", "BDG", "Garuda Indonesia", image.getResourceId(0, 0), "07:00", "08:30")
         val flight7 =
-            Flight("7", "4007", "arrive", "SBY", "JKT", "Garuda Indonesia", image.getResourceId(0, 0), "07:00", "08:30")
+            Flight("7", "4007", "arrive", "SBY", "BDG", "Garuda Indonesia", image.getResourceId(0, 0), "08:00", "09:30")
         val flight8 =
-            Flight("8", "4008", "arrive", "SBY", "JKT", "Lion Air", image.getResourceId(1, 0), "07:00", "08:30")
+            Flight("8", "4008", "arrive", "JKT", "BDG", "Lion Air", image.getResourceId(1, 0), "09:00", "10:30")
         val flight9 =
-            Flight("9", "4009", "arrive", "SBY", "JKT", "Ethad Airways", image.getResourceId(3, 0), "07:00", "08:30")
+            Flight("9", "4009", "arrive", "MESIR", "BDG", "Ethad Airways", image.getResourceId(3, 0), "07:00", "08:30")
         val flight10 =
-            Flight("10", "4010", "arrive", "SBY", "JKT", "Ethad Airways", image.getResourceId(3, 0), "07:00", "08:30")
+            Flight("10", "4010", "arrive", "ARAB", "BDG", "Ethad Airways", image.getResourceId(3, 0), "07:00", "08:30")
 
         DataStore.FlightList.add(flight1)
         DataStore.FlightList.add(flight2)

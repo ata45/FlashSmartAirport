@@ -4,13 +4,12 @@ package com.shela.janu.naufal.flashsmartairport
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
+import com.shela.janu.naufal.flashsmartairport.checkin.CheckInActivity
 import com.shela.janu.naufal.flashsmartairport.db.FlightSchedule
 import com.shela.janu.naufal.flashsmartairport.db.database
 import com.shela.janu.naufal.flashsmartairport.facility.FacilityActivity
@@ -103,10 +102,10 @@ class HomeFragment : Fragment() {
             activity?.finish()
         }
         btn_check.setOnClickListener {
-            Snackbar.make(rl_fragment_home, getString(R.string.coming_soon),Snackbar.LENGTH_SHORT).show()
+            activity?.startActivity(intentFor<CheckInActivity>())
         }
         btn_maps.setOnClickListener {
-            activity?.startActivity(intentFor<MapsActivity2>())
+            activity?.startActivity(intentFor<MapsActivity>())
             activity?.finish()
         }
     }
